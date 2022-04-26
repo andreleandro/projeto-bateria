@@ -3,7 +3,7 @@ document.body.addEventListener('keyup', (event)=>{
 })
 
 document.querySelector('.composer button').addEventListener('click', () => {
-    let song = document.querySelector('#input').value
+    let song = document.querySelector('#input').value.toLowerCase()
 
     if(song !== '') {
         let songArray = song.split('')
@@ -27,6 +27,7 @@ function playSound (sound) {
             keyElement.classList.remove('active')
        }, 300)
     }
+
 }
 
 function playComposition(songArray) {
